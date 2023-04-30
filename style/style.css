@@ -1,0 +1,93 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+  /* colours */
+  --clr-one: #ff1868;
+  --clr-two: #000000;
+  --clr-three: #ffffff;
+  /* fonts */
+  --active-number-font: font-family: 'PT Sans', sans-serif;
+  --active-number-font-narrow: font-family: 'PT Sans Narrow', sans-serif;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+section {
+  background: var( --clr-one );
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo a span {
+  filter: invert( 1 );
+}
+
+nav.navigation {
+  display: none;
+}
+nav.navigation.active {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: var( --clr-one );
+}
+nav.navigation.active a {
+  padding: 20px;
+  color: var( --clr-three );
+  font-family: var( --active-number-font );
+  font-size: 20px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.toggleBox a span {
+  filter: invert( 1 );
+}
+
+span.menu.hide {
+  display: none;
+}
+
+span.close {
+  display: none;
+}
+
+span.close.show {
+  display: flex;
+  text-decoration: none;
+}
+
+/* for desktop view */
+@media screen and ( min-width: 991px ) {
+  nav.navigation {
+    display: flex;
+  }
+  nav.navigation a {
+    font-size: 16px;
+    padding: 10px;
+    color: var( --clr-three );
+    font-family: var( --active-number-font );
+    font-weight: 700;
+    font-size: 16;
+    text-decoration: none;
+  }
+  div.toggleBox {
+    display: none;
+  }
+}

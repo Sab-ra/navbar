@@ -5,11 +5,26 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="style/style.css">
+  <!-- Collection of Google icons -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
   <title>My First Navbar</title>
 </head>
 <body>
   <section>
-    <nav>
+    <div class="logo">
+      <!-- <a href="#"><img src="img/logo-go.png" alt="overlapping circles" height="45px"></a> -->
+      <a href="#">
+        <span class="material-symbols-outlined">
+          account_circle
+          </span>
+      </a>
+    </div>
+    <nav class="navigation">
       <a href="#">My policies</a>
       <a href="#">My claims</a>
       <a href="#">Who pays</a>
@@ -17,11 +32,24 @@
       <a href="#">Log off</a>
     </nav>
     <div class="toggleBox">
-      <a href="#"><img src="img/menu_icon.png" alt="Mobile menu" height="45px"></a>
-    </div>
-    <div class="logo">
-      <a href="#"><img src="img/logo-go.png" alt="overlapping circles" height="45px"></a>
+      <!-- <a href="#"><img src="img/menu_icon.png" alt="Mobile menu" height="45px"></a> -->
+      <a onclick="showMenu()" href="#">
+        <span class="material-symbols-outlined menu">
+          menu
+          </span>
+        <span class="material-symbols-outlined close">
+          close
+          </span>
+      </a>
     </div>
   </section>
+
+  <script>
+    function showMenu() {
+      document.querySelector( '.navigation' ).classList.toggle( 'active' );
+      document.querySelector( '.menu' ).classList.toggle( 'hide' );
+      document.querySelector( '.close' ).classList.toggle( 'show' );
+    }
+  </script>
 </body>
 </html>
